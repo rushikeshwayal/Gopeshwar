@@ -2,6 +2,8 @@
 import { useEffect } from "react";
 import AOS from "aos"; // AOS library for scroll animations
 import "aos/dist/aos.css"; // AOS CSS
+import Image from "next/image"; // Image component
+import aboutImg from "../../public/family.jpg"; // Image path
 
 export default function AboutUS() {
   // Initialize AOS on mount
@@ -41,8 +43,8 @@ return (
         data-aos="fade-left" // Animation on scroll (image comes from right)
         data-aos-offset="200" // Trigger the animation when 200px away from viewport
     >
-        <img
-        src="/family.jpg"
+        <Image
+        src={aboutImg}
         alt="Organic Dairy Products"
         className="w-full h-auto rounded-3xl shadow-lg object-cover transform transition duration-500"
         />

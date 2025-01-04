@@ -1,4 +1,6 @@
 import Link from "next/link";
+import Image from "next/image";
+import gopeshwar from "../../public/gopeshwar.png";
 
 export default function Navbar() {
 return (
@@ -6,7 +8,7 @@ return (
     <nav className="flex justify-between items-center px-8 py-4">
         {/* Logo */}
         {/* <h1 className="font-yatra text-3xl text-[#578e7e] cursor-pointer">Gopeshwar</h1> */}
-        <img src="/gopeshwar.png" alt="Gopeshwar" className="cursor-pointer w-44" />
+        <Image src={gopeshwar} alt="Gopeshwar" className="cursor-pointer w-44" />
         
         {/* Navigation Links */}
         <ul className="flex md:space-x-20 ">

@@ -2,7 +2,10 @@
 import React from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-
+import Image from 'next/image';
+import farmer from '../../public/farmer.png';
+import plantBased from '../../public/plant-based.png';
+import quality from '../../public/quality.png';
 export default function Discover() {
     const [ref, inView] = useInView({
         threshold: 0.2, // Trigger animation when 20% of the section is in view
@@ -44,8 +47,8 @@ export default function Discover() {
                     animate={controls}
                     variants={variantsLeft}
                 >
-                    <img
-                        src="/farmer.png"
+                    <Image
+                        src={farmer}
                         alt="Local Farmer"
                         className="w-16 h-16 mx-auto mb-4"
                     />
@@ -62,8 +65,8 @@ export default function Discover() {
                     animate={controls}
                     variants={variantsBottom}
                 >
-                    <img
-                        src="/plant-based.png"
+                    <Image
+                        src={plantBased}
                         alt="Organic"
                         className="w-16 h-16 mx-auto mb-4"
                     />
@@ -80,8 +83,8 @@ export default function Discover() {
                     animate={controls}
                     variants={variantsRight}
                 >
-                    <img
-                        src="/quality.png"
+                    <Image
+                        src={quality}
                         alt="Quality"
                         className="w-16 h-16 mx-auto mb-4"
                     />

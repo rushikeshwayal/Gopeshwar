@@ -3,7 +3,7 @@ import Discover from "@/components/Discover";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import WhyUS from "@/components/WhyUS";
-import Image from "next/image";
+// import Image from "next/image";
 
 export default function Home() {
   return (
