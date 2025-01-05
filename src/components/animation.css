@@ -1,0 +1,19 @@
+/* Define your keyframes for fade-in animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    scale: 0.8;
+  }
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+/* Use the animation-timeline with view() */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s linear;
+  animation-timeline: view(); /* The animation will sync with the view */
+  animation-range:entry 0 cover 40%; /* Start the animation when the entry is in the viewport */
+}
