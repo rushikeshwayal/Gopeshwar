@@ -8,7 +8,7 @@ export default function Footer() {
           <div className="md:col-span-2 lg:col-span-1 mb-8 md:mb-0">
             <h1 className="font-cinzel text-3xl mb-4">Gopeshwar</h1>
             <p className="font-serif italic text-gray-200">
-              "Nurturing Health with the Purity of Milk"
+            `&quot;` Nurturing Health with the Purity of Milk `&quot`;
             </p>
           </div>
 
