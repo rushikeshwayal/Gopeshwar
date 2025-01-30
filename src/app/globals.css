@@ -1,14 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Yatra+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Yatra+One&display=swap");
 @font-face {
   font-family: "Glacial Indifference";
   font-style: normal;
   font-weight: 400;
   src: local("Glacial Indifference"),
-    url("/GlacialIndifference-Regular.woff") format("woff");
+    url("/fonts/GlacialIndifference-Regular.woff") format("woff");
 }
 
 @tailwind base;
-@tailwind components;
+@tailwind components; 
 @tailwind utilities;
 
 body {
@@ -20,3 +20,5 @@ body {
     --radius: 0.5rem;
   }
 }
+
+

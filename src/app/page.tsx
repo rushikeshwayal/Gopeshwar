@@ -1,6 +1,7 @@
 import AboutUS from "@/components/AboutUS";
 import Discover from "@/components/Discover";
 import Footer from "@/components/Footer";
+import Founder from "@/components/Founder";
 import Hero from "@/components/Hero";
 import Info from "@/components/Info";
 import Navbar from "@/components/Navbar";
@@ -17,10 +18,12 @@ export default function Home() {
       <Discover/>
       <AboutUS/>
       <WhyUS/>
+      <Founder/>
       <Product/>
       <Info/>
       <Testimonial/>
       <Footer/>
+      
     </div>
   );
 }

@@ -49,7 +49,7 @@ export default function Product() {
                         <p className="text-sm text-[#3D3D3D] text-center">
                             Locally sourced, pure milk for every family.
                         </p>
-                        <button className="mt-4 px-6 py-2 bg-[#578E7E] text-white text-sm rounded-full hover:bg-[#3D3D3D] transition duration-300 font-glacial">
+                        <span className="mt-4 px-6 py-2 bg-[#578E7E] text-white text-sm rounded-full hover:bg-[#3D3D3D] transition duration-300 font-glacial">
                             <AlertDialog>
                                 <AlertDialogTrigger>Learn More</AlertDialogTrigger>
                                 <AlertDialogContent className='font-glacial'>
@@ -66,7 +66,7 @@ export default function Product() {
                                     </AlertDialogFooter>
                                 </AlertDialogContent>
                             </AlertDialog>
-                        </button>
+                        </span>
                     </div>
                 </div>
 
@@ -84,7 +84,7 @@ export default function Product() {
                         <p className="text-sm text-[#3D3D3D] text-center">
                             Velvety and rich, made with the best milk.
                         </p>
-                        <button className="mt-4 px-6 py-2 bg-[#578E7E] text-white text-sm rounded-full hover:bg-[#3D3D3D] transition duration-300 font-glacial">
+                        <span className="mt-4 px-6 py-2 bg-[#578E7E] text-white text-sm rounded-full hover:bg-[#3D3D3D] transition duration-300 font-glacial">
                             <AlertDialog>
                                 <AlertDialogTrigger>Learn More</AlertDialogTrigger>
                                 <AlertDialogContent className='font-glacial'>
@@ -101,7 +101,7 @@ export default function Product() {
                                     </AlertDialogFooter>
                                 </AlertDialogContent>
                             </AlertDialog>
-                        </button>
+                        </span>
                     </div>
                 </div>
 
@@ -119,7 +119,7 @@ export default function Product() {
                         <p className="text-sm text-[#3D3D3D] text-center">
                             Soft and smooth, perfect for spreading.
                         </p>
-                        <button className="mt-4 px-6 py-2 bg-[#578E7E] text-white text-sm rounded-full hover:bg-[#3D3D3D] transition duration-300 font-glacial">
+                        <span className="mt-4 px-6 py-2 bg-[#578E7E] text-white text-sm rounded-full hover:bg-[#3D3D3D] transition duration-300 font-glacial">
                             <AlertDialog>
                                 <AlertDialogTrigger>Learn More</AlertDialogTrigger>
                                 <AlertDialogContent className='font-glacial'>
@@ -136,7 +136,7 @@ export default function Product() {
                                     </AlertDialogFooter>
                                 </AlertDialogContent>
                             </AlertDialog>
-                        </button>
+                        </span>
                     </div>
                 </div>
 
@@ -154,7 +154,7 @@ export default function Product() {
                         <p className="text-sm text-[#3D3D3D] text-center">
                             Soft and smooth, perfect for spreading.
                         </p>
-                        <button className="mt-4 px-6 py-2 bg-[#578E7E] text-white text-sm rounded-full hover:bg-[#3D3D3D] transition duration-300 font-glacial">
+                        <span className="mt-4 px-6 py-2 bg-[#578E7E] text-white text-sm rounded-full hover:bg-[#3D3D3D] transition duration-300 font-glacial">
                             <AlertDialog>
                                 <AlertDialogTrigger>Learn More</AlertDialogTrigger>
                                 <AlertDialogContent className='font-glacial'>
@@ -171,7 +171,7 @@ export default function Product() {
                                     </AlertDialogFooter>
                                 </AlertDialogContent>
                             </AlertDialog>
-                        </button>
+                        </span>
                     </div>
                 </div>
 
@@ -189,7 +189,7 @@ export default function Product() {
                         <p className="text-sm text-[#3D3D3D] text-center">
                             Soft and smooth, perfect for spreading.
                         </p>
-                        <button className="mt-4 px-6 py-2 bg-[#578E7E] text-white text-sm rounded-full hover:bg-[#3D3D3D] transition duration-300 font-glacial">
+                        <span className="mt-4 px-6 py-2 bg-[#578E7E] text-white text-sm rounded-full hover:bg-[#3D3D3D] transition duration-300 font-glacial">
                             <AlertDialog>
                                 <AlertDialogTrigger>Learn More</AlertDialogTrigger>
                                 <AlertDialogContent className='font-glacial'>
@@ -206,7 +206,7 @@ export default function Product() {
                                     </AlertDialogFooter>
                                 </AlertDialogContent>
                             </AlertDialog>
-                        </button>
+                        </span>
                     </div>
                 </div>
 
@@ -224,7 +224,7 @@ export default function Product() {
                         <p className="text-sm text-[#3D3D3D] text-center">
                             Soft and smooth, perfect for spreading.
                         </p>
-                        <button className="mt-4 px-6 py-2 bg-[#578E7E] text-white text-sm rounded-full hover:bg-[#3D3D3D] transition duration-300 font-glacial">
+                        <span className="mt-4 px-6 py-2 bg-[#578E7E] text-white text-sm rounded-full hover:bg-[#3D3D3D] transition duration-300 font-glacial">
                             <AlertDialog>
                                 <AlertDialogTrigger>Learn More</AlertDialogTrigger>
                                 <AlertDialogContent className='font-glacial'>
@@ -241,7 +241,7 @@ export default function Product() {
                                     </AlertDialogFooter>
                                 </AlertDialogContent>
                             </AlertDialog>
-                        </button>
+                        </span>
                     </div>
                 </div>
 
@@ -259,7 +259,7 @@ export default function Product() {
                         <p className="text-sm text-[#3D3D3D] text-center">
                             Soft and smooth, perfect for spreading.
                         </p>
-                        <button className="mt-4 px-6 py-2 bg-[#578E7E] text-white text-sm rounded-full hover:bg-[#3D3D3D] transition duration-300 font-glacial">
+                        <span className="mt-4 px-6 py-2 bg-[#578E7E] text-white text-sm rounded-full hover:bg-[#3D3D3D] transition duration-300 font-glacial">
                             <AlertDialog>
                                 <AlertDialogTrigger>Learn More</AlertDialogTrigger>
                                 <AlertDialogContent className='font-glacial'>
@@ -276,7 +276,7 @@ export default function Product() {
                                     </AlertDialogFooter>
                                 </AlertDialogContent>
                             </AlertDialog>
-                        </button>
+                        </span>
                     </div>
                 </div>
 
@@ -294,7 +294,7 @@ export default function Product() {
                         <p className="text-sm text-[#3D3D3D] text-center">
                             Soft and smooth, perfect for spreading.
                         </p>
-                        <button className="mt-4 px-6 py-2 bg-[#578E7E] text-white text-sm rounded-full hover:bg-[#3D3D3D] transition duration-300 font-glacial">
+                        <span className="mt-4 px-6 py-2 bg-[#578E7E] text-white text-sm rounded-full hover:bg-[#3D3D3D] transition duration-300 font-glacial">
                             <AlertDialog>
                                 <AlertDialogTrigger>Learn More</AlertDialogTrigger>
                                 <AlertDialogContent className='font-glacial'>
@@ -311,7 +311,7 @@ export default function Product() {
                                     </AlertDialogFooter>
                                 </AlertDialogContent>
                             </AlertDialog>
-                        </button>
+                        </span>
                     </div>
                 </div>
 
@@ -329,7 +329,7 @@ export default function Product() {
                         <p className="text-sm text-[#3D3D3D] text-center">
                             Soft and smooth, perfect for spreading.
                         </p>
-                        <button className="mt-4 px-6 py-2 bg-[#578E7E] text-white text-sm rounded-full hover:bg-[#3D3D3D] transition duration-300 font-glacial">
+                        <span className="mt-4 px-6 py-2 bg-[#578E7E] text-white text-sm rounded-full hover:bg-[#3D3D3D] transition duration-300 font-glacial">
                             <AlertDialog>
                                 <AlertDialogTrigger>Learn More</AlertDialogTrigger>
                                 <AlertDialogContent className='font-glacial'>
@@ -346,7 +346,7 @@ export default function Product() {
                                     </AlertDialogFooter>
                                 </AlertDialogContent>
                             </AlertDialog>
-                        </button>
+                        </span>
                     </div>
                 </div>
             </div>

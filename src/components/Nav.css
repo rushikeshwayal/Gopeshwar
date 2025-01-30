@@ -1,0 +1,10 @@
+@media (max-width: 775px) {
+  #mainNav {
+    display: none;
+  }
+}
+@media (min-width: 775px) {
+  #partNav {
+    display: none;
+  }
+}
