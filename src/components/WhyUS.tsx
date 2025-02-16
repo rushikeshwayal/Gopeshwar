@@ -99,7 +99,7 @@ export default function WhyUS() {
                             { icon: cow, title: "Locally Sourced", text: "Our milk is sourced from local farmers who treat their cows with love and care." },
                             { icon: quality, title: "Quality", text: "Our milk is of the highest quality and free from artificial hormones." },
                             { icon: plantBased, title: "Organic", text: "Our milk is organic and free from harmful chemicals or pesticides." },
-                        ].map((feature, index) => (
+                        ].map((feature, index) => ( // eslint-disable-line @typescript-eslint/no-unused-vars
                             <motion.div
                                 key={feature.title}
                                 variants={itemAnimation}
