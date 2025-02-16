@@ -4,153 +4,124 @@ import whyus from "../../public/whyus.jpg";
 import cow from "../../public/cow.png";
 import plantBased from "../../public/plant-based.png";
 import quality from "../../public/quality.png";
-import React, { useEffect, useState } from "react";
-import {  motion, useAnimation } from "framer-motion";
+import React, { useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-// import { del } from "framer-motion/client";
 
 export default function WhyUS() {
     const controls = useAnimation();
-    const [hasAnimated, setHasAnimated] = useState(false);
-    const { ref, inView } = useInView({
-        threshold: 0.3, // Trigger animation when 40% of the section is in view
-        triggerOnce: true, // Ensure animation occurs only once
+    const [featuresRef, featuresInView] = useInView({
+        threshold: 0.3,
+        triggerOnce: true,
+    });
+
+    const [textRef, textInView] = useInView({
+        threshold: 0.3,
+        triggerOnce: true,
     });
 
     useEffect(() => {
-        if (inView && !hasAnimated) {
+        if (featuresInView && textInView) {
             controls.start("visible");
-            setHasAnimated(true);
         }
-    }, [inView, controls, hasAnimated]);
+    }, [featuresInView, textInView, controls]);
 
-    const cardAnimationLeft = {
-        hidden: { opacity: 0, x: -50 },
+    const cardAnimation = {
+        hidden: { opacity: 0 },
         visible: {
             opacity: 1,
-            x: 0,
-            transition: { duration: 1, ease: "easeOut" ,delay:0.5 },
+            transition: {
+                staggerChildren: 0.3,
+                when: "beforeChildren",
+            },
         },
     };
 
-    const cardAnimationRight = {
-        hidden: { opacity: 0, x: 50 },
-        visible: {
-            opacity: 1,
-            x: 0,
-            transition: { duration: 1, ease: "easeOut",delay:0.5 },
-        },
-    };
-
-    const cardAnimationBottom = {
-        hidden: { opacity: 0, y: 50 },
+    const itemAnimation = {
+        hidden: { opacity: 0, y: 20 },
         visible: {
             opacity: 1,
             y: 0,
-            transition: { duration: 1, ease: "easeOut" ,delay:0.5 },
+            transition: { duration: 0.8, ease: "easeOut" },
         },
     };
 
     const textAnimation = {
-        hidden: { opacity: 0, y: 50 },
+        hidden: { opacity: 0 },
         visible: {
             opacity: 1,
-            y: 0,
             transition: { duration: 1, ease: "easeOut" },
         },
     };
 
-    
-
     return (
-        <div className="bg-[#F5ECD5] pt-16">
-            {/* Image with overlay and text */}
-            <div className="relative w-full h-[500px]">
-                {/* Background Image */}
+        <div className="bg-[#F5ECD5] pt-12 sm:pt-16">
+            <div className="relative w-full h-[900px] sm:h-[400px] md:h-[500px]">
                 <Image
                     src={whyus}
                     alt="whyus"
                     className="w-full h-full object-cover rounded-lg"
+                    priority
                 />
 
-                {/* Mid-layer color overlay */}
-                <div className="absolute inset-0 bg-[#578E7E] opacity-90 rounded-lg"></div>
+                <div className="absolute inset-0 bg-[#578E7E] opacity-90 rounded-lg" />
 
-                {/* Text Content */}
-                <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4">
+                <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4 sm:px-8">
                     <motion.div
+                        ref={textRef}
                         initial="hidden"
-                        animate={controls}
+                        animate={textInView ? "visible" : "hidden"}
                         variants={textAnimation}
+                        className="mb-8 sm:mb-12"
                     >
-                    <p className="text-lg md:text-xl font-semibold font-glacial mb-2 uppercase tracking-widest text-black">
-                        Why Choose Us
-                    </p>
-                    <h1 className="text-2xl md:text-4xl font-bold font-cinzel mb-6 leading-relaxed">
-                        Taste the Difference with FreshMoo&apos;s Hormone-Free Milk
-                    </h1>
+                        <motion.p
+                            variants={textAnimation}
+                            className="text-lg md:text-xl font-semibold font-glacial mb-2 uppercase tracking-widest text-black"
+                        >
+                            Why Choose Us
+                        </motion.p>
+                        <motion.h1
+                            variants={textAnimation}
+                            className="text-2xl md:text-4xl font-bold font-cinzel mb-4 sm:mb-6 leading-relaxed"
+                        >
+                            Taste the Difference with FreshMoo&apos;s Hormone-Free Milk
+                        </motion.h1>
                     </motion.div>
 
-                    {/* Features Section */}
-                    <div
-                        className="grid grid-cols-1 md:grid-cols-3 gap-20 w-full "
-                        ref={ref}
+                    <motion.div
+                        ref={featuresRef}
+                        initial="hidden"
+                        animate={featuresInView ? "visible" : "hidden"}
+                        variants={cardAnimation}
+                        className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-12 md:gap-20 w-full max-w-6xl"
                     >
-                        {/* Locally Sourced Feature (Left Animation) */}
-                        <motion.div
-                            className="flex flex-col items-center"
-                            initial="hidden"
-                            animate={controls}
-                            variants={cardAnimationLeft}
-                        >
-                            <Image src={cow} alt="Cow" className="w-14 h-14 mb-4" />
-                            <h2 className="text-lg md:text-xl font-semibold font-glacial mb-2">
-                                Locally Sourced
-                            </h2>
-                            <p className="text-sm md:text-base font-glacial leading-relaxed">
-                                Our milk is sourced from local farmers who treat their cows with
-                                love and care.
-                            </p>
-                        </motion.div>
-
-                        {/* Quality Feature (Bottom Animation) */}
-                        <motion.div
-                            className="flex flex-col items-center"
-                            initial="hidden"
-                            animate={controls}
-                            variants={cardAnimationBottom}
-                        >
-                            <Image src={quality} alt="Quality" className="w-14 h-14 mb-4" />
-                            <h2 className="text-lg md:text-xl font-semibold font-glacial mb-2">
-                                Quality
-                            </h2>
-                            <p className="text-sm md:text-base font-glacial leading-relaxed">
-                                Our milk is of the highest quality and free from artificial
-                                hormones.
-                            </p>
-                        </motion.div>
-
-                        {/* Organic Feature (Right Animation) */}
-                        <motion.div
-                            className="flex flex-col items-center"
-                            initial="hidden"
-                            animate={controls}
-                            variants={cardAnimationRight}
-                        >
-                            <Image
-                                src={plantBased}
-                                alt="Organic"
-                                className="w-14 h-14 mb-4"
-                            />
-                            <h2 className="text-lg md:text-xl font-semibold font-glacial mb-2">
-                                Organic
-                            </h2>
-                            <p className="text-sm md:text-base font-glacial leading-relaxed">
-                                Our milk is organic and free from harmful chemicals or
-                                pesticides.
-                            </p>
-                        </motion.div>
-                    </div>
+                        {[
+                            { icon: cow, title: "Locally Sourced", text: "Our milk is sourced from local farmers who treat their cows with love and care." },
+                            { icon: quality, title: "Quality", text: "Our milk is of the highest quality and free from artificial hormones." },
+                            { icon: plantBased, title: "Organic", text: "Our milk is organic and free from harmful chemicals or pesticides." },
+                        ].map((feature, index) => (
+                            <motion.div
+                                key={feature.title}
+                                variants={itemAnimation}
+                                className="flex flex-col items-center p-4"
+                            >
+                                <div className="mb-4 w-14 h-14 sm:w-16 sm:h-16 relative">
+                                    <Image
+                                        src={feature.icon}
+                                        alt={feature.title}
+                                        layout="fill"
+                                        objectFit="contain"
+                                    />
+                                </div>
+                                <h2 className="text-lg md:text-xl font-semibold font-glacial mb-2">
+                                    {feature.title}
+                                </h2>
+                                <p className="text-sm md:text-base font-glacial leading-relaxed">
+                                    {feature.text}
+                                </p>
+                            </motion.div>
+                        ))}
+                    </motion.div>
                 </div>
             </div>
         </div>

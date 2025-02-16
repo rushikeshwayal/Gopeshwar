@@ -81,8 +81,8 @@ export default function Testimonial() {
 
 
             <div className=" bg-[#F5ECD5]  min-h-[700px] relative flex  w-full flex-col items-center justify-center  overflow-hidden rounded-lg border md:shadow-xl font-glacial">
-            <h1 className="font-cinzel text-4xl text-gray-800 dark:text-white mb-6 mt-28">What Our Clients Say</h1>
-            <p className="text-lg text-gray-600 dark:text-white/70 mb-10 font-glacial">Here are some of the most recent reviews from our valued clients.</p>
+            <h1 className="font-cinzel text-4xl text-gray-800 dark:text-white mb-6 mt-28 text-center">What Our Clients Say</h1>
+            <p className="text-lg text-gray-600 dark:text-white/70 mb-10 font-glacial text-center">Here are some of the most recent reviews from our valued clients.</p>
 
                 <Marquee pauseOnHover className="[--duration:20s]">
                     {firstRow.map((review) => (
